@@ -1,5 +1,5 @@
 """
-WSGI config for oh project.
+WSGI config for secrets project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
