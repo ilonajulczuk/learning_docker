@@ -8,3 +8,11 @@ class SecretMessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = SecretMessage
         fields = ('key', 'text',)
+    
+    def validate_key(self, value):
+        """
+        Check that the key is unique.
+        """
+        if SecretMessage.objects.filter(key=value).exists():
+            raise serializers.ValidationError("Message with such key already exists.")
+        return value
