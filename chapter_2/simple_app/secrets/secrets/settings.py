@@ -1,7 +1,6 @@
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -27,16 +26,15 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.staticfiles',
-    
+
     'rest_framework',
-    
+
     'messages',
 )
 
 MIDDLEWARE_CLASSES = []
 
 ROOT_URLCONF = 'secrets.urls'
-
 WSGI_APPLICATION = 'secrets.wsgi.application'
 
 
@@ -46,7 +44,7 @@ WSGI_APPLICATION = 'secrets.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, '../../db.sqlite3'),
     }
 }
 
